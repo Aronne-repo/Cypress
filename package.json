@@ -1,0 +1,23 @@
+{
+  "name": "CYPRESS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aronne-repo/Cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aronne-repo/Cypress/issues"
+  },
+  "homepage": "https://github.com/Aronne-repo/Cypress#readme",
+  "devDependencies": {
+    "cypress": "^15.16.0"
+  }
+}
