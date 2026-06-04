@@ -14,3 +14,9 @@ Cypress.Commands.add('invalidLogin', (username, password) => {
   cy.get('input[name="password"]').should('be.visible').type(password);
   cy.get('button[type="submit"]').click();
 });
+
+Cypress.Commands.add('chooseDropdownOption', (dropdownLocator, optionName) => {
+  cy.get(dropdownLocator).within(() => {
+      cy.contains('li', optionName.trim()).should('be.visible').click();
+    });
+});
