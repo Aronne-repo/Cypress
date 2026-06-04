@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   retries: {
@@ -17,4 +17,4 @@ module.exports = defineConfig({
       // Implement node event listeners here
     },
   },
-})
+});
