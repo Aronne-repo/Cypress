@@ -16,37 +16,37 @@ Designed with a scalable structure based on Cypress E2E architecture and ready f
 ---
 
 ## Install dependencies:
-
+```
 npm install
-
+```
 ## If Cypress is not installed:
-
+```
 npm install cypress --save-dev
-
+```
 ## Open Cypress for the first time:
-
+```
 npx cypress open
-
+```
 ---
 
 ## Test launch
 
 **Run all tests in headless mode**:
-
+```
 npx cypress run
-
+```
 **Run all tests in specific browser**:
-
+```
 npx cypress run --browser chrome
-
+```
 **Run a specific spec file**:
-
+```
 npx cypress run --spec "cypress/e2e/login/login.cy.js"
-
+```
 **Run tests in interactive mode (GUI)**:
-
+```
 npx cypress open
-
+```
 ---
 
 ## This framework can be easily integrated with:
