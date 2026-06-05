@@ -15,8 +15,28 @@ Cypress.Commands.add('invalidLogin', (username, password) => {
   cy.get('button[type="submit"]').click();
 });
 
-Cypress.Commands.add('chooseDropdownOption', (dropdownLocator, optionName) => {
-  cy.get(dropdownLocator).within(() => {
+Cypress.Commands.add('chooseDropdownOption', (locator, optionName) => {
+  cy.get(locator).within(() => {
       cy.contains('li', optionName.trim()).should('be.visible').click();
     });
+});
+
+Cypress.Commands.add('openSidebarChevron', (locator) => {
+  cy.get(locator).then(($icon) => {
+    const classes = $icon.attr('class') || '';
+
+    if (classes.includes('toggled')) {
+      cy.wrap($icon).parent('button').click();
+    }
+  });
+});
+
+Cypress.Commands.add('closeSidebarChevron', (locator) => {
+  cy.get(locator).then(($icon) => {
+    const classes = $icon.attr('class') || '';
+
+    if (!classes.includes('toggled')) {
+      cy.wrap($icon).parent('button').click();
+    }
+  });
 });

@@ -3,7 +3,7 @@ describe('Login', () => {
     cy.visit(Cypress.env('baseUrl'));
   });
 
-  it('Should login successfully with valid credentials', () => {
+  it('Login should be performed successfully with valid credentials', () => {
     cy.intercept('POST', '**/auth/validate').as('loginRequest');
 
     cy.login();
@@ -13,7 +13,7 @@ describe('Login', () => {
     cy.get('.oxd-topbar-header-title').should('be.visible');
   });
 
-  it('Should not login with invalid username', () => {
+  it('Login should not be performed with invalid username', () => {
     cy.intercept('POST', '**/auth/validate').as('loginRequest');
 
     cy.invalidLogin(Cypress.env('invalidUsername'), Cypress.env('password'));
@@ -24,7 +24,7 @@ describe('Login', () => {
     cy.get('.oxd-alert-content-text').should('be.visible').and('have.text', 'Invalid credentials');
   });
 
-  it('Should not login with invalid password', () => {
+  it('Login should not be performed with invalid password', () => {
     cy.intercept('POST', '**/auth/validate').as('loginRequest');
 
     cy.invalidLogin(Cypress.env('username'), Cypress.env('invalidPassword'));
