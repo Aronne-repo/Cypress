@@ -1,9 +1,9 @@
-describe('Login', () => {
+describe('Logout', () => {
   beforeEach(() => {
     cy.login();
   });
 
-  it('Should log out successfully', () => {
+  it('Log out should be performed successfully', () => {
     cy.intercept('POST', '**/events/push').as('logoutRequest');
 
     cy.get('.oxd-userdropdown-tab').within(() => {
